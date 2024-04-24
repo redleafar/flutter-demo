@@ -34,7 +34,6 @@ class _BubbleTabBarDemoState extends State<BubbleTabBarDemo> {
     //Declare some buttons for our tab bar
     _navBarItems = [
       NavBarItemData("Home", OMIcons.home, 110, Color(0xff01b87d)),
-      NavBarItemData("Likes", OMIcons.favoriteBorder, 100, Color(0xffcf4c7a)),
       NavBarItemData("Camera", OMIcons.camera, 115, Color(0xff09a8d9)),      
     ];
 
@@ -42,6 +41,7 @@ class _BubbleTabBarDemoState extends State<BubbleTabBarDemo> {
     _viewsByIndex = <Widget>[
       HomePage(),
       LikesPage(),
+      GalleryPage(),
       CameraPage(camera: camera),      
     ];
     super.initState();

@@ -51,9 +51,9 @@ class _LikesPage extends State<LikesPage> {
                     ),
                   ),
                   //Header text
-                  Expanded(
+                  const Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                      padding: EdgeInsets.only(left: 10.0, right: 10.0),
                       child: Text(
                         'Favorites',
                         style: TextStyle(

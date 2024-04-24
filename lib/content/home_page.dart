@@ -1,3 +1,4 @@
+import 'package:demo/content/profile_detail.dart';
 import 'package:demo/main.dart';
 import 'package:demo/comments.dart';
 import 'package:flutter/material.dart';
@@ -41,11 +42,11 @@ class _HomePage extends State<HomePage> {
                     ),
                   ),
                   //Header text
-                  Expanded(
+                  const Expanded(
                     child: Padding(
                       padding: const EdgeInsets.only(left: 10.0, right: 10.0),
                       child: Text(
-                        'Home',
+                        'Disney Social',
                         style: TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
@@ -111,13 +112,26 @@ class __CommentViewState extends State<_CommentView> {
             Container(
               width: 40,
               height: 40,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20.0),
-                child: Image.network(
-                  comments.comments[_index].userThumb,
-                  height: 40,
-                ),
-              ),
+              child: Hero(
+                tag: comments.comments[_index].userThumb,
+                child: IconButton(
+                  iconSize: 40,
+                  padding: EdgeInsets.zero,
+                  icon: ClipRRect(
+                    borderRadius: BorderRadius.circular(20.0),
+                    child: Image.network(
+                      comments.comments[_index].userThumb,
+                      height: 40,
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Profile(comments.comments[_index]))
+                    );
+                  },
+                ) 
+              )
             ),
             Expanded(
               child: Padding(

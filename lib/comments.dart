@@ -5,7 +5,7 @@ class Comments {
       'https://featuredanimation.com/wp-content/uploads/2022/02/Mickey-Mouse-Disney-Plus-Icon.jpg.webp',
       'Mickey',
       '',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud',
+      'test2',
       'https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/wdpro-assets/gallery/attractions/epcot/spaceship-earth/spaceship-earth-gallery00.jpg?1661270254143',
       100,
       20,
@@ -14,6 +14,7 @@ class Comments {
     Comment(
       '2',
       'https://featuredanimation.com/wp-content/uploads/2022/02/Simba-Disney-Plus-Icon.jpg.webp',
+      //'https://static.wikia.nocookie.net/house-of-mouse/images/9/95/Simba.png/revision/latest?cb=20140502161207&path-prefix=es',
       'Simba',
       '',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud',
@@ -92,6 +93,8 @@ class Comment {
       this._commentCount,
       this._loveCount);
 
+  get id => _id;
+  
   get loveCount => _loveCount;
 
   get commentCount => _commentCount;
